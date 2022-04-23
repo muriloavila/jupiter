@@ -27,7 +27,7 @@ class ProjectsController < ApplicationController
       flash[:notice] = "Projeto Atualizado com sucesso."
       redirect_to @project
     else
-      render edit_project_path(@project)
+      render 'edit'
     end
   end
 
@@ -50,6 +50,6 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    parameters = params.require(:project).permit(:nome, :descricao, :github_url)
+    parameters = params.require(:project).permit(:nome, :descricao, :github_url, :status_id)
   end
 end

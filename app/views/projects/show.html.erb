@@ -1,7 +1,7 @@
 <%= render 'layouts/message' %>
 <h1>Projeto</h1>
 
-<h3><%= @project.nome %>
+<h3><%= @project.nome %> - Status: <%= @project.status.nome_status %>
 <p>
   <%= link_to @project.github_url, @project.github_url %>
 </p>

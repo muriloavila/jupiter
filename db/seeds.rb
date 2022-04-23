@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+status = Status.create([{nome_status: 'Iniciado'}, {nome_status: 'Em Desenvolvimento'}, {nome_status: 'Finalizado'}])
