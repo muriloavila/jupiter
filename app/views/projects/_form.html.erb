@@ -1,0 +1,13 @@
+<%= render 'shared/errors', obj: @project %>
+
+<div>
+  <%= form_with(model: @project, local: true) do |form| %>
+    <%= form.label :nome, "Nome: " %>
+    <%= form.text_field :nome %><br />
+    <%= form.label :nome, "Descrição: " %>
+    <%= form.text_area :descricao %><br />
+    <%= form.label :nome, "Github: " %>
+    <%= form.text_field :github_url %><br />
+    <%= form.submit %>
+  <% end %>
+</div>

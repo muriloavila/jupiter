@@ -1,0 +1,8 @@
+<%= render 'layouts/message' %>
+<h1>Projeto</h1>
+
+<h3><%= @project.nome %>
+<p>
+  <%= link_to @project.github_url, @project.github_url %>
+</p>
+<%= @project.descricao %>
