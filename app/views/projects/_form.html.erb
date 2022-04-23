@@ -8,6 +8,8 @@
     <%= form.text_area :descricao %><br />
     <%= form.label :nome, "Github: " %>
     <%= form.text_field :github_url %><br />
+    <%= form.label :nome, "Status: " %>
+    <%= form.collection_select(:status_id, Status.order('nome_status'), :id, :nome_status, {prompt: "-- Status --"}) %><br />
     <%= form.submit %>
   <% end %>
 </div>

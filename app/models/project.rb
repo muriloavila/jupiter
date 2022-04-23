@@ -1,4 +1,5 @@
 class Project < ApplicationRecord
+  belongs_to :status
   validates :nome, presence: {message: "o campo é obrigatório."}, 
                    length: { minimum: 2, maximum: 60, 
                              too_short: "%{count} é o número mínimo de caracteres para o campo", 
