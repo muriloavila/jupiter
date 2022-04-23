@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_23_133014) do
+ActiveRecord::Schema.define(version: 2022_04_23_215419) do
 
   create_table "projects", force: :cascade do |t|
     t.string "nome"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 2022_04_23_133014) do
 
   create_table "status", force: :cascade do |t|
     t.string "nome_status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "nome"
+    t.integer "project_id"
+    t.integer "status_id"
+    t.text "descricao"
+    t.string "commit_hash"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
