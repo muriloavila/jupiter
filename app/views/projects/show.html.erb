@@ -6,3 +6,8 @@
   <%= link_to @project.github_url, @project.github_url %>
 </p>
 <%= @project.descricao %>
+
+<br />
+<%= link_to 'Tarefas', project_tasks_path(@project)  %>
+<br />
+<%= link_to 'Criar Nova Tarefa', new_project_task_path(@project) %>

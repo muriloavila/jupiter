@@ -4,11 +4,11 @@
   <%= form_with(model: @project, local: true) do |form| %>
     <%= form.label :nome, "Nome: " %>
     <%= form.text_field :nome %><br />
-    <%= form.label :nome, "Descrição: " %>
+    <%= form.label :descricao, "Descrição: " %>
     <%= form.text_area :descricao %><br />
-    <%= form.label :nome, "Github: " %>
+    <%= form.label :github_url, "Github: " %>
     <%= form.text_field :github_url %><br />
-    <%= form.label :nome, "Status: " %>
+    <%= form.label :status, "Status: " %>
     <%= form.collection_select(:status_id, Status.order('nome_status'), :id, :nome_status, {prompt: "-- Status --"}) %><br />
     <%= form.submit %>
   <% end %>

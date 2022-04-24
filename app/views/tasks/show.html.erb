@@ -1,0 +1,6 @@
+<%= render 'layouts/message' %>
+
+
+<h1>Tarefa <%= @task.nome %></h1>
+<%= link_to 'Editar', edit_project_task_path(@project, @task) %>
+<%= link_to 'Deletar', project_task_path(@project, @task), method: :delete %>
