@@ -1,8 +1,6 @@
-<h1>Editar Tarefa</h1>
-
 <%= render 'shared/errors', obj: @task %>
 
-<%= form_with(model: @task, local: true, url: project_task_path(@project, @task), method: 'PATCH') do |form| %>
+<%= form_with(model: @task, local: true, url: project_tasks_path) do |form| %>
   <%= form.label :nome, 'Nome:' %>
   <%= form.text_field :nome %><br />
   <%= form.label :status_id, 'Status:' %>
