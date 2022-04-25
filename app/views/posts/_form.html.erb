@@ -1,0 +1,8 @@
+<%= render 'shared/errors', obj: @post %>
+
+<%= form_with(model: @post, local: true, url: project_task_posts_path) do |form| %>
+  <%= form.label :titulo, 'Título' %><br />
+  <%= form.text_field :titulo %><br /><br />
+  <%= form.text_area :texto %><br />
+  <%= form.submit %>
+<% end %>
