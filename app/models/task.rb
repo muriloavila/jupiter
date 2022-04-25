@@ -1,5 +1,6 @@
 class Task < ApplicationRecord
   belongs_to :project
+  has_many :posts, dependent: :destroy
   validates :nome, presence: {message: "o campo é obrigatório."}, 
                     length: { minimum: 2, maximum: 60, 
                       too_short: "%{count} é o número mínimo de caracteres para o campo", 

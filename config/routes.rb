@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   resources :projects
   resources :projects do
     resources :tasks
+
+    resources :tasks do
+      resources :posts
+    end
   end
 end
