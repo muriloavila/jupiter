@@ -1,9 +1,16 @@
-<%= render 'layouts/message' %>
+<div class="container py-5">
+  <%= render 'layouts/message' %>
 
+  <p style="padding-bottom: 0px;font-family: Roboto;font-size: 45px;font-weight: 300;">
+    <%= @task.nome %>
+  </p>
 
-<h1>Tarefa <%= @task.nome %></h1>
+  <p style="padding-bottom: 0px;font-size: 15px;font-weight: 300;font-family: Roboto;"><%= @task.descricao %></p>
 
-<%= render @task.posts %>
+  <%= link_to 'Editar', edit_project_task_path(@project, @task) %>
+  <%= link_to 'Deletar', project_task_path(@project, @task), method: :delete %>
 
-<%= link_to 'Editar', edit_project_task_path(@project, @task) %>
-<%= link_to 'Deletar', project_task_path(@project, @task), method: :delete %>
+  <hr>
+
+  <%= render @task.posts %>
+</div>

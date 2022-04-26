@@ -1,1 +1,12 @@
-<p><%= link_to post.titulo, project_task_post_path(@project, @task, post) %></p>
+<%= link_to project_task_post_path(@project, @task, post), class: 'text-decoration-none',action: 'go' do %>
+<div class="py-2">
+  <div class="card text-white bg-dark mb-3 rounded-3 border-secondary">
+    <div class="card-header text-center rounded-3">
+      <h5 class="card-title text-white"><%= post.titulo %></h5>
+    </div>
+    <div class="card-body rounded-3" style="height: 100px">
+      <p class="card-text" style="font-size: 16px"> <%= post.texto.first(300)  %><%= '...' if post.texto.length > 300 %> </p>
+    </div>
+  </div>
+</div>
+<% end %>
