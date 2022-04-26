@@ -1,0 +1,51 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+// Graphical variables
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+
+.navigation {
+  background-color: rgb(23, 23, 23) !important;
+  border-radius: 0px !important;
+  border-bottom: 1px solid rgb(36, 36, 36) !important;
+  transition: box-shadow 300ms ease 0s !important;
+  box-shadow: none !important;
+  font-family: Roboto;
+}
+
+
+
+.body {
+  z-index: 1 !important;
+  top: 0px !important;
+  overflow: hidden !important;
+  background: none rgb(17, 17, 17) !important;
+  box-sizing: border-box !important;
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+  
+}
+
+.card-body {
+  background: none rgb(23, 23, 23);
+}
+.card-body:hover{
+  background: none rgb(26, 26, 26)
+}
+
+.card-text {
+  word-break: break-word; font-family: Roboto; font-size: 14px; font-weight: 300; color: rgba(255, 255, 255, 0.61);
+}
