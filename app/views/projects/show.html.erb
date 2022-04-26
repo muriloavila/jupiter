@@ -1,13 +1,16 @@
-<%= render 'layouts/message' %>
-<h1>Projeto</h1>
+<div class="h-100 pt-5 pb-2 text-white bg-transparent">
+  <%= render 'layouts/message' %>
+  <p style="padding-bottom: 0px;font-family: Roboto;font-size: 45px;font-weight: 300;">
+    <span><%= @project.nome %></span>
+    <span><%= link_to image_tag("GitHub-Mark-Light-32px.png"), @project.github_url %></span>
+    </p>
 
-<h3><%= @project.nome %> - Status: <%= @project.status.nome_status %>
-<p>
-  <%= link_to @project.github_url, @project.github_url %>
-</p>
-<%= @project.descricao %>
+  <p style="padding-bottom: 0px;font-size: 15px;font-weight: 300;"><%= @project.descricao %></p>
+  
+  <div style="text-align: right">
+    <%= link_to 'Criar Nova Tarefa', new_project_task_path(@project), class: 'btn btn-dark border border-white text-right' %>
+  </div>
+</div>
 
-<br />
-<%= link_to 'Tarefas', project_tasks_path(@project)  %>
-<br />
-<%= link_to 'Criar Nova Tarefa', new_project_task_path(@project) %>
+<hr>
+<%= render @project.task %>

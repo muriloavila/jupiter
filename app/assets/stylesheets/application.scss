@@ -24,7 +24,10 @@
   border-bottom: 1px solid rgb(36, 36, 36) !important;
   transition: box-shadow 300ms ease 0s !important;
   box-shadow: none !important;
+  font-family: Roboto;
 }
+
+
 
 .body {
   z-index: 1 !important;
@@ -32,5 +35,17 @@
   overflow: hidden !important;
   background: none rgb(17, 17, 17) !important;
   box-sizing: border-box !important;
-  font-family: Helvetica, Arial, sans-serif !important;
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+  
+}
+
+.card-body {
+  background: none rgb(23, 23, 23);
+}
+.card-body:hover{
+  background: none rgb(26, 26, 26)
+}
+
+.card-text {
+  word-break: break-word; font-family: Roboto; font-size: 14px; font-weight: 300; color: rgba(255, 255, 255, 0.61);
 }
